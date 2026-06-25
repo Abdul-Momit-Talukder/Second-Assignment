@@ -1,63 +1,474 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechWave Podcast</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechWave - Unlock the power of technology through insightful talks, developer interviews, and career roadmap discussions for software engineers and creators.">
+  <title>TechWave - Podcast Website</title>
+  <link rel="stylesheet" href="style.css">
+  
+
+  <meta property="og:title" content="TechWave - Podcast Website">
+  <meta property="og:description" content="Unlock the power of technology through insightful talks, developer interviews, and career roadmap discussions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/episode_ai.png">
 </head>
-<body class="bg-[#0b0a12] text-white">
+<body>
 
-    <!-- Navbar -->
-    <nav class="flex items-center justify-between p-6">
-        <div class="font-bold text-2xl">TechWave</div>
-        <!-- Hamburger for mobile -->
-        <img src="hamburger-menu.png" alt="Menu" class="md:hidden w-6">
-        <div class="hidden md:flex gap-8">
-            <a href="#">About</a>
-            <a href="#">Episodes</a>
-            <a href="#">Host</a>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="nav-logo">
+        Tech<span class="brand-wave">Wave</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="nav-toggle-label" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+        <span></span>
+      </label>
+
+      <nav class="nav-menu" id="nav-menu-links">
+        <a href="#about" class="nav-link" id="link-about">About</a>
+        <a href="#why-choose" class="nav-link" id="link-why">Why Choose</a>
+        <a href="#episodes" class="nav-link" id="link-episodes">Episodes</a>
+        <a href="#host" class="nav-link" id="link-host">Host</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#subscribe" class="btn btn-gradient-purple" id="btn-nav-subscribe">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section" id="hero">
+    <div class="hero-wave-bg"></div>
+    <div class="container hero-content">
+      
+      <div class="podcast-circle-wrapper">
+        <div class="podcast-circle" id="hero-podcast-badge">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/>
+          </svg>
+          <div class="podcast-badge" id="badge-new-release">NEW</div>
         </div>
-        <button class="bg-gradient-to-r from-pink-500 to-violet-600 px-6 py-2 rounded-full text-sm">Subscribe</button>
-    </nav>
+      </div>
 
-    <!-- Hero Section -->
-    <section style="background-image: url('hero-bg.jpg');" class="bg-cover py-20 text-center">
-        <div class="relative inline-block">
-            <img src="hero-circle.png" alt="Podcast" class="w-40">
+      <h1 class="hero-title" id="main-headline">TechWave</h1>
+      <p class="hero-desc" id="subtext-headline">
+        Unlock the power of technology through insightful talks and personal growth
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://open.spotify.com" target="_blank" rel="noopener" class="btn btn-gradient-orange" id="btn-spotify">
+          <!-- Spotify SVG Icon -->
+          <svg class="btn-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.668-.135-.744-.47-.076-.336.135-.668.47-.743 3.856-.88 7.15-.502 9.82.113.296.18.387.563.207.873zm1.224-2.724c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.183-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.666-1.11 8.24-.575 11.34 1.33.367.227.487.708.262 1.085zm.106-2.833C14.492 8.78 8.766 8.59 5.43 9.603c-.51.155-1.047-.134-1.202-.645-.155-.51.134-1.047.645-1.202 3.827-1.162 10.15-.945 14.15 1.43.46.273.61.87.337 1.33-.274.46-.87.61-1.33.337z"/>
+          </svg>
+          Listen on Spotify
+        </a>
+        
+        <!-- All Episodes Button -->
+        <a href="#episodes" class="btn btn-outline" id="btn-all-episodes">All Episodes</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About The Podcast Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <h2 class="section-title" id="about-title">About The Podcast</h2>
+        <div class="about-desc-box">
+          <p class="about-p" id="about-desc-1">
+            TechWave is your guide to navigating the ever-evolving world of technology. 
+            We share deep-dive conversations with industry experts, software engineering leaders, 
+            and product builders to bring you raw, unfiltered insights.
+          </p>
+          <p class="about-p" id="about-desc-2">
+            Whether you want to learn about advanced system designs, understand the future of AI, 
+            or build your career, TechWave provides the knowledge you need.
+          </p>
         </div>
-        <h1 class="text-6xl font-bold mt-6">TechWave</h1>
-    </section>
+      </div>
 
-    <!-- Why Choose Section -->
-    <section class="p-12">
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-slate-900 p-6 rounded-xl flex gap-4">
-                <img src="headphone.png" class="w-10 h-10">
-                <div>
-                    <h4 class="font-bold">Premium Audio Quality</h4>
-                    <p class="text-sm text-gray-400">Experience crystal clear audio.</p>
-                </div>
+      <!-- Statistics Items (4 stats in a row / 2x2 grid on mobile) -->
+      <div class="stats-grid" id="stats-counter-group">
+        
+        <!-- Stat item 1 -->
+        <div class="stat-card" id="stat-item-listeners">
+          <div class="stat-number">150K+</div>
+          <div class="stat-label">Monthly Listeners</div>
+        </div>
+
+        <!-- Stat item 2 -->
+        <div class="stat-card" id="stat-item-episodes">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Episodes Published</div>
+        </div>
+
+        <!-- Stat item 3 -->
+        <div class="stat-card" id="stat-item-rating">
+          <div class="stat-number">4.9 ★</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+
+        <!-- Stat item 4 -->
+        <div class="stat-card" id="stat-item-experts">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Industry Experts</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-section" id="why-choose">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <h2 class="section-title" id="why-title">Why Choose TechWave</h2>
+        <p class="section-desc" id="why-subtitle">
+          We focus on providing high-quality, actionable discussions without fluff. Here is what makes our podcast unique.
+        </p>
+      </div>
+
+      <!-- 5 Feature Cards in Asymmetric CSS Grid layout -->
+      <div class="why-grid" id="feature-cards-grid">
+        
+        <!-- Card 1: Premium Audio Quality (Tall Card, spans 2 rows) -->
+        <div class="g-card why-card-1" id="feature-card-audio">
+          <div class="card-icon-wrapper">
+            <div class="card-icon" style="color: #b624ff;">
+              <!-- Headphones SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+              </svg>
             </div>
-            <div class="bg-slate-900 p-6 rounded-xl flex gap-4">
-                <img src="device.png" class="w-10 h-10">
-                <div>
-                    <h4 class="font-bold">Mobile Friendly</h4>
-                    <p class="text-sm text-gray-400">Listen on any device.</p>
-                </div>
-            </div>
+          </div>
+          <h3 class="card-title">Premium Audio Quality</h3>
+          <p class="card-desc">
+            Experience crystal-clear audio with professional-grade recording equipment and expert audio mastering. 
+            Every discussion is clean, balanced, and optimized for high-fidelity listening on all devices.
+          </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer style="background-image: url('footer-bg.jpg');" class="bg-cover py-12 text-center">
-        <div class="font-bold text-2xl mb-4">TechWave</div>
-        <div class="flex justify-center gap-4">
-            <img src="apple-podcast.png" class="w-6">
-            <img src="instagram.png" class="w-6">
+        <!-- Card 2: Mobile Friendly (Row 1, Columns 2-3) -->
+        <div class="g-card why-card-2" id="feature-card-mobile">
+          <div class="card-icon-wrapper">
+            <div class="card-icon" style="color: #ffd000;">
+              <!-- Smartphone SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="card-title">Mobile Friendly</h3>
+          <p class="card-desc">
+            Listen on the go. Our site is fully optimized to provide an excellent user experience, quick loading times, 
+            and seamless playback controls on mobile web browsers without needing dedicated apps.
+          </p>
         </div>
-        <p class="text-gray-500 mt-6 text-sm">© 2026 TechWave. All rights reserved.</p>
-    </footer>
+
+        <!-- Card 3: Global Community (Row 2, Columns 2-3) -->
+        <div class="g-card why-card-3" id="feature-card-community">
+          <div class="card-icon-wrapper">
+            <div class="card-icon" style="color: #00f0ff;">
+              <!-- Globe SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="card-title">Global Community</h3>
+          <p class="card-desc">
+            Connect with thousands of developers, founders, and designers across the globe. 
+            Join our discussion channels, share notes, and build valuable professional connections.
+          </p>
+        </div>
+
+        <!-- Card 4: Exclusive Interviews (Row 3, Columns 1-2) -->
+        <div class="g-card why-card-4" id="feature-card-interviews">
+          <div class="card-icon-wrapper">
+            <div class="card-icon" style="color: #ff007f;">
+              <!-- Lightning SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="card-title">Exclusive Interviews</h3>
+          <p class="card-desc">
+            Get access to exclusive conversations with high-profile guests including CTOs of tech giants, 
+            successful indie hackers, open-source contributors, and research scientists.
+          </p>
+        </div>
+
+        <!-- Card 5: Rich Resources (Row 3, Column 3) -->
+        <div class="g-card why-card-5" id="feature-card-resources">
+          <div class="card-icon-wrapper">
+            <div class="card-icon" style="color: #00f5a0;">
+              <!-- Book Open SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="card-title">Rich Resources</h3>
+          <p class="card-desc">
+            Each episode comes with complete transcripts, code snippets, reading lists, and detailed notes 
+            to help you apply what you hear to your daily work.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Episodes Section -->
+  <section class="episodes-section" id="episodes">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <h2 class="section-title" id="episodes-title">Featured Episodes</h2>
+        <p class="section-desc" id="episodes-subtitle">
+          Tune in to our top-rated episodes covering cutting-edge technology, work cultures, and career advice.
+        </p>
+      </div>
+
+      <!-- 3 Episode Cards -->
+      <div class="episodes-grid" id="episodes-cards-grid">
+        
+        <!-- Episode 1: AI -->
+        <div class="episode-card" id="episode-item-1">
+          <!-- Video Thumbnail Image container with Play Overlay (opens in new tab) -->
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="episode-thumb-wrapper" aria-label="Play Episode 1: The Future of AI in Everyday Life">
+            <img src="assets/episode_ai.png" alt="Futuristic AI Brain Thumbnail" class="episode-thumb">
+            <div class="play-overlay">
+              <div class="play-btn-circle">
+                <!-- Play triangle icon -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          
+          <div class="episode-info">
+            <h3 class="episode-title">The Future of AI in Everyday Life</h3>
+            <p class="episode-desc">
+              Exploring how artificial intelligence is transforming our daily routines, from smart homes 
+              to automated tasks and productivity platforms.
+            </p>
+            <div class="episode-meta">
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="episode-link" id="ep-link-1">
+                <!-- Spotify Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.668-.135-.744-.47-.076-.336.135-.668.47-.743 3.856-.88 7.15-.502 9.82.113.296.18.387.563.207.873zm1.224-2.724c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.183-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.666-1.11 8.24-.575 11.34 1.33.367.227.487.708.262 1.085zm.106-2.833C14.492 8.78 8.766 8.59 5.43 9.603c-.51.155-1.047-.134-1.202-.645-.155-.51.134-1.047.645-1.202 3.827-1.162 10.15-.945 14.15 1.43.46.273.61.87.337 1.33-.274.46-.87.61-1.33.337z"/>
+                </svg>
+                34 mins
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Episode 2: Remote Work -->
+        <div class="episode-card" id="episode-item-2">
+          <!-- Video Thumbnail Image container with Play Overlay -->
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="episode-thumb-wrapper" aria-label="Play Episode 2: Building Better Habits for Remote Work">
+            <img src="assets/episode_remotework.png" alt="Cozy Home Office Workspace Thumbnail" class="episode-thumb">
+            <div class="play-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          
+          <div class="episode-info">
+            <h3 class="episode-title">Building Better Habits for Remote Work</h3>
+            <p class="episode-desc">
+              Practical advice on managing your time, setting boundary routines, avoiding burnout, 
+              and maintaining high productivity in a home office setup.
+            </p>
+            <div class="episode-meta">
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="episode-link" id="ep-link-2">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.668-.135-.744-.47-.076-.336.135-.668.47-.743 3.856-.88 7.15-.502 9.82.113.296.18.387.563.207.873zm1.224-2.724c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.183-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.666-1.11 8.24-.575 11.34 1.33.367.227.487.708.262 1.085zm.106-2.833C14.492 8.78 8.766 8.59 5.43 9.603c-.51.155-1.047-.134-1.202-.645-.155-.51.134-1.047.645-1.202 3.827-1.162 10.15-.945 14.15 1.43.46.273.61.87.337 1.33-.274.46-.87.61-1.33.337z"/>
+                </svg>
+                28 mins
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Episode 3: Career Growth -->
+        <div class="episode-card" id="episode-item-3">
+          <!-- Video Thumbnail Image container with Play Overlay -->
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="episode-thumb-wrapper" aria-label="Play Episode 3: Career Growth in Tech: A Roadmap">
+            <img src="assets/episode_career.png" alt="Tech Career Roadmap Design Thumbnail" class="episode-thumb">
+            <div class="play-overlay">
+              <div class="play-btn-circle">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          
+          <div class="episode-info">
+            <h3 class="episode-title">Career Growth in Tech: A Roadmap</h3>
+            <p class="episode-desc">
+              Key technical skills, strategic networking tips, and engineering leadership insights 
+              for developers and designers to excel in the current landscape.
+            </p>
+            <div class="episode-meta">
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="episode-link" id="ep-link-3">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.668-.135-.744-.47-.076-.336.135-.668.47-.743 3.856-.88 7.15-.502 9.82.113.296.18.387.563.207.873zm1.224-2.724c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.183-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.666-1.11 8.24-.575 11.34 1.33.367.227.487.708.262 1.085zm.106-2.833C14.492 8.78 8.766 8.59 5.43 9.603c-.51.155-1.047-.134-1.202-.645-.155-.51.134-1.047.645-1.202 3.827-1.162 10.15-.945 14.15 1.43.46.273.61.87.337 1.33-.274.46-.87.61-1.33.337z"/>
+                </svg>
+                42 mins
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Meet The Host Section (Challenge) -->
+  <section class="host-section" id="host">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <h2 class="section-title" id="host-section-title">Meet The Host</h2>
+      </div>
+
+      <!-- Host Bio Card -->
+      <div class="g-card host-card" id="host-profile-card">
+        
+        <!-- Circular Host Image with Gradient Ring -->
+        <div class="host-img-wrapper">
+          <img src="assets/host_alex.png" alt="Alex Kumar - Host of TechWave" class="host-img">
+        </div>
+
+        <!-- Host Text Content & Social Links -->
+        <div class="host-content">
+          <h3 class="host-name" id="host-fullname">Alex Kumar</h3>
+          <p class="host-bio" id="host-biography">
+            Tech enthusiast, podcaster, and software developer. Alex has been in the industry for over a decade, 
+            hosting conversations with top tech leaders. Through TechWave, he shares industry trends, engineering insights, 
+            and growth hacks to help developers and creators build successful careers and software.
+          </p>
+          
+          <!-- Social Icons Group -->
+          <div class="host-socials" id="host-social-links">
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Alex Kumar on LinkedIn" id="social-linkedin">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Alex Kumar on Twitter" id="social-twitter">
+              <svg viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Alex Kumar on YouTube" id="social-youtube">
+              <svg viewBox="0 0 24 24">
+                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Alex Kumar on Instagram" id="social-instagram">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer" id="subscribe">
+    <div class="footer-wave-bg"></div>
+    <div class="container footer-container">
+      
+      <!-- Big Logo -->
+      <div class="footer-logo" id="footer-brand-logo">
+        Tech<span class="brand-wave">Wave</span>
+      </div>
+
+      <!-- Platforms List with Icons -->
+      <div class="footer-platforms" id="footer-platforms-list">
+        <!-- Spotify -->
+        <a href="https://open.spotify.com" target="_blank" rel="noopener" class="platform-link" id="foot-spotify">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.668-.135-.744-.47-.076-.336.135-.668.47-.743 3.856-.88 7.15-.502 9.82.113.296.18.387.563.207.873zm1.224-2.724c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.183-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.666-1.11 8.24-.575 11.34 1.33.367.227.487.708.262 1.085zm.106-2.833C14.492 8.78 8.766 8.59 5.43 9.603c-.51.155-1.047-.134-1.202-.645-.155-.51.134-1.047.645-1.202 3.827-1.162 10.15-.945 14.15 1.43.46.273.61.87.337 1.33-.274.46-.87.61-1.33.337z"/>
+          </svg>
+          Spotify
+        </a>
+
+        <!-- Apple Podcasts -->
+        <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="platform-link" id="foot-apple">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.9c-.8.1-1.5-.2-2-.8-.4-.5-.6-1.2-.6-1.9 0-.6.2-1.3.6-1.8.8-.9 2.2-.9 3 0 .4.5.6 1.2.6 1.8 0 .8-.2 1.4-.6 1.9-.3.5-.6.7-1 .8zm0-6.1c-.8.1-1.5-.2-2-.8-.4-.5-.6-1.2-.6-1.9 0-.6.2-1.3.6-1.8.8-.9 2.2-.9 3 0 .4.5.6 1.2.6 1.8 0 .8-.2 1.4-.6 1.9-.3.5-.6.7-1 .8zm.2-6.5c-3.1 0-5.7 2.5-5.7 5.7S10 16 13.2 16c3.1 0 5.7-2.5 5.7-5.7s-2.5-5.7-5.7-5.7zm0 10c-2.4 0-4.3-1.9-4.3-4.3s1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3-1.9 4.3-4.3 4.3z"/>
+          </svg>
+          Apple Podcasts
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com" target="_blank" rel="noopener" class="platform-link" id="foot-youtube">
+          <svg viewBox="0 0 24 24">
+            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          YouTube
+        </a>
+
+        <!-- Twitter -->
+        <a href="https://twitter.com" target="_blank" rel="noopener" class="platform-link" id="foot-twitter">
+          <svg viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          Twitter
+        </a>
+      </div>
+
+      <!-- Divider line -->
+      <div class="footer-divider"></div>
+
+      <!-- Copyright Info -->
+      <p class="copyright" id="footer-copyright-text">
+        &copy; 2026 TechWave. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
 
 </body>
 </html>
