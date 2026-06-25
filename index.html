@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave Podcast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b0a12] text-white">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between p-6">
+        <div class="font-bold text-2xl">TechWave</div>
+        <!-- Hamburger for mobile -->
+        <img src="hamburger-menu.png" alt="Menu" class="md:hidden w-6">
+        <div class="hidden md:flex gap-8">
+            <a href="#">About</a>
+            <a href="#">Episodes</a>
+            <a href="#">Host</a>
+        </div>
+        <button class="bg-gradient-to-r from-pink-500 to-violet-600 px-6 py-2 rounded-full text-sm">Subscribe</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section style="background-image: url('hero-bg.jpg');" class="bg-cover py-20 text-center">
+        <div class="relative inline-block">
+            <img src="hero-circle.png" alt="Podcast" class="w-40">
+        </div>
+        <h1 class="text-6xl font-bold mt-6">TechWave</h1>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="p-12">
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-900 p-6 rounded-xl flex gap-4">
+                <img src="headphone.png" class="w-10 h-10">
+                <div>
+                    <h4 class="font-bold">Premium Audio Quality</h4>
+                    <p class="text-sm text-gray-400">Experience crystal clear audio.</p>
+                </div>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-xl flex gap-4">
+                <img src="device.png" class="w-10 h-10">
+                <div>
+                    <h4 class="font-bold">Mobile Friendly</h4>
+                    <p class="text-sm text-gray-400">Listen on any device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-image: url('footer-bg.jpg');" class="bg-cover py-12 text-center">
+        <div class="font-bold text-2xl mb-4">TechWave</div>
+        <div class="flex justify-center gap-4">
+            <img src="apple-podcast.png" class="w-6">
+            <img src="instagram.png" class="w-6">
+        </div>
+        <p class="text-gray-500 mt-6 text-sm">© 2026 TechWave. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
